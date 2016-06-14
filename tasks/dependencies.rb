@@ -85,11 +85,12 @@ namespace :dependencies do
                                                      other_platforms: false, leave_frozen: false
   gemfile_lock_task :update_kitchen_tests_gemfile_lock, dirs: %w{
     kitchen-tests
-    kitchen-tests/test/integration/webapp/serverspec
   }
   berksfile_lock_task :update_kitchen_tests_berksfile_lock, dirs: %w{
     kitchen-tests
     kitchen-tests/cookbooks/audit_test
+    kitchen-tests/cookbooks/base
+    kitchen-tests/cookbooks/webapp
   }
   # kitchen-tests/cookbooks/webapp isn't solving right now ....
 
